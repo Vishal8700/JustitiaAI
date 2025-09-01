@@ -1,13 +1,7 @@
-import ChatWindow from "@/components/ChatWindow";
+import DesktopLayout from "@/components/DesktopLayout";
 
 const Index = () => {
-  return (
-    <div className="min-h-screen bg-chat-bg flex items-center justify-center p-4">
-      <div className="w-full max-w-md">
-        <ChatWindow />
-      </div>
-    </div>
-  );
+  return <DesktopLayout />;
 };
 
 export default Index;

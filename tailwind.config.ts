@@ -54,11 +54,11 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-				chat: {
-					bg: 'hsl(var(--chat-bg))',
-					'user-bubble': 'hsl(var(--user-bubble))',
-					'bot-bubble': 'hsl(var(--bot-bubble))',
-					input: 'hsl(var(--chat-input))'
+				sidebar: {
+					bg: 'hsl(var(--sidebar-bg))',
+					border: 'hsl(var(--sidebar-border))',
+					'item-hover': 'hsl(var(--sidebar-item-hover))',
+					'item-active': 'hsl(var(--sidebar-item-active))'
 				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
