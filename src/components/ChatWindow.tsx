@@ -2,6 +2,8 @@ import { useState, useRef, useEffect } from "react";
 import ChatHeader from "./ChatHeader";
 import ChatMessage from "./ChatMessage";
 import ChatInput from "./ChatInput";
+import { useChatStore } from "@/store/chatStore";
+import { useNavigate } from "react-router-dom";
 
 interface Message {
   id: string;
@@ -11,6 +13,8 @@ interface Message {
 }
 
 const ChatWindow = () => {
+  const { user } = useChatStore();
+  const navigate = useNavigate();
   const [messages, setMessages] = useState<Message[]>([
     {
       id: "1",
@@ -28,9 +32,17 @@ const ChatWindow = () => {
 
   useEffect(() => {
     scrollToBottom();
-  }, [messages]);
+    if (!user) {
+      navigate("/"); // Redirect to MainContent if not logged in
+    }
+  }, [messages, user, navigate]);
 
   const handleSendMessage = (text: string) => {
+    if (!user) {
+      navigate("/"); // Ensure user is logged in before sending
+      return;
+    }
+
     const userMessage: Message = {
       id: Date.now().toString(),
       text,
@@ -64,6 +76,10 @@ const ChatWindow = () => {
     
     return responses[Math.floor(Math.random() * responses.length)];
   };
+
+  if (!user) {
+    return null; // Or a loading state if preferred
+  }
 
   return (
     <div className="flex flex-col h-screen max-w-md mx-auto bg-chat-bg">

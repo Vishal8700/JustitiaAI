@@ -4,7 +4,7 @@ import MainContent from "@/components/MainContent";
 const Index = () => {
   return (
     <DesktopLayout>
-      <MainContent userName="Judha" />
+      <MainContent  />
     </DesktopLayout>
   );
 };

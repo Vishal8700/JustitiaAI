@@ -26,7 +26,6 @@ const App = () => (
             <Route path="/library" element={<Library />} />
             <Route path="/history" element={<History />} />
             <Route path="/chat/:id?" element={<Chat />} />
-            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
