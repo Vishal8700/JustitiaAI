@@ -113,3 +113,52 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* Custom Scrollbar for Light and Dark Mode */
+@layer base {
+  /* Webkit browsers (Chrome, Safari, Edge) */
+  ::-webkit-scrollbar {
+    @apply w-2; /* Width of scrollbar */
+  }
+
+  /* Scrollbar track (background) */
+  ::-webkit-scrollbar-track {
+    @apply bg-gray-100;
+    /* Custom dark background */
+    background-color: #f3f4f6; /* Light mode */
+  }
+
+  .dark ::-webkit-scrollbar-track {
+    background-color: #1f1f1f; /* Your custom dark background */
+  }
+
+  /* Scrollbar handle/thumb */
+  ::-webkit-scrollbar-thumb {
+    @apply bg-gray-300 rounded-lg;
+  }
+
+  .dark ::-webkit-scrollbar-thumb {
+    background-color: #4b5563; /* Dark mode thumb */
+  }
+
+  /* Scrollbar handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-gray-400;
+  }
+
+  .dark ::-webkit-scrollbar-thumb:hover {
+    background-color: #6b7280; /* Dark mode thumb hover */
+  }
+
+  /* Firefox scrollbar */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: #d1d5db #f3f4f6; /* Light mode: thumb track */
+  }
+
+  /* Dark mode for Firefox with custom background */
+  .dark * {
+    scrollbar-color: #4b5563 #1f1f1f; /* Dark mode with your custom bg */
+  }
+}
+
