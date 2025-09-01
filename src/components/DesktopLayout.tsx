@@ -1,20 +1,15 @@
-import { useState } from "react";
+import { ReactNode } from "react";
 import Sidebar from "@/components/Sidebar";
-import MainContent from "@/components/MainContent";
 
-const DesktopLayout = () => {
-  const [chatCount, setChatCount] = useState(0);
+interface DesktopLayoutProps {
+  children?: ReactNode;
+}
 
-  const handleNewChat = () => {
-    setChatCount(prev => prev + 1);
-    // Here you would typically navigate to a new chat or reset the current chat
-    console.log("Starting new chat...");
-  };
-
+const DesktopLayout = ({ children }: DesktopLayoutProps) => {
   return (
     <div className="h-screen flex bg-background">
       <Sidebar />
-      <MainContent onNewChat={handleNewChat} />
+      {children}
     </div>
   );
 };
