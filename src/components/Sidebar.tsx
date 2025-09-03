@@ -112,7 +112,7 @@ const Sidebar = () => {
           <div className="w-8 h-8 rounded-lg overflow-hidden flex items-center justify-center ">
             {/* Replace SVG with Lottie animation */}
             <DotLottieReact
-              src="https://lottie.host/e52b3dc2-923d-47a2-b135-70a24b9c7ac4/m7qdPrHCBZ.lottie"
+              src="https://lottie.host/3538fa0a-6263-48e7-b941-61f96fffef2f/x6mgrhK4OG.lottie"
               loop
               autoplay
               className="w-6 h-6"
