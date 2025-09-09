@@ -39,13 +39,18 @@ export const VideoSection: React.FC = () => {
             
             {/* Replace this div with your YouTube embed */}
             <div className="absolute inset-0 flex items-center justify-center">
-              <div className="text-center text-blue-900">
-                <p className="text-lg mb-4">🎥 यहाँ अपना YouTube video link डालें</p>
-                <code className="bg-white bg-opacity-80 px-4 py-2 rounded text-sm text-gray-800">
-                  &lt;iframe src="your-youtube-video-url"&gt;&lt;/iframe&gt;
-                </code>
-              </div>
-            </div>
+  <div className="text-center w-full h-full">
+    <video
+      src="./video.mp4"
+      controls
+      loop
+      className="rounded-lg shadow-lg w-full h-full object-cover"
+    >
+      Your browser does not support the video tag.
+    </video>
+  </div>
+</div>
+
           </div>
         </div>
 
