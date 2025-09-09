@@ -76,7 +76,7 @@ const MainContent = () => {
             const response = await fetch("https://openrouter.ai/api/v1/chat/completions", {
               method: "POST",
               headers: {
-                Authorization: "Bearer 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",
+                Authorization: `Bearer ${import.meta.env.VITE_OPENROUTER_API_KEY}`,
                 "HTTP-Referer": window.location.origin,
                 "X-Title": "LegalAI Consultancy Bot",
                 "Content-Type": "application/json",
@@ -131,7 +131,7 @@ Text from image:`,
       const response = await fetch("https://openrouter.ai/api/v1/chat/completions", {
         method: "POST",
         headers: {
-          Authorization: "Bearer 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",
+          Authorization: `Bearer ${import.meta.env.VITE_OPENROUTER_API_KEY}`,
           "HTTP-Referer": window.location.origin,
           "X-Title": "LegalAI Consultancy Bot",
           "Content-Type": "application/json",
