@@ -25,7 +25,6 @@ const Sidebar = () => {
   const menuItems = [
     { icon: Home, label: "Home", path: "/" },
     { icon: Compass, label: "Explore", path: "/explore" },
-    { icon: Library, label: "Library", path: "/library" },
     { icon: History, label: "History", path: "/history" },
   ];
 
