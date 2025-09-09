@@ -40,14 +40,16 @@ export const VideoSection: React.FC = () => {
             {/* Replace this div with your YouTube embed */}
             <div className="absolute inset-0 flex items-center justify-center">
   <div className="text-center w-full h-full">
-    <video
-      src="./video.mp4"
-      controls
-      loop
-      className="rounded-lg shadow-lg w-full h-full object-cover"
-    >
-      Your browser does not support the video tag.
-    </video>
+    <iframe
+      width="100%"
+      height="100%"
+      src="https://www.youtube.com/embed/XkU5nexRDsQ?autoplay=1&controls=1&modestbranding=1&rel=0"
+      title="Justitia AI | Golden Hawk | Submission GenAI Exchange Hackathon"
+      frameBorder="0"
+      allow="autoplay; encrypted-media; picture-in-picture"
+      allowFullScreen
+      className="rounded-lg shadow-lg w-full h-full"
+    ></iframe>
   </div>
 </div>
 
