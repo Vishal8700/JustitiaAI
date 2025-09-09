@@ -284,7 +284,7 @@ Maintain context from the conversation and provide relevant legal advice or gene
         },
         {
           headers: {
-            Authorization: "Bearer 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",
+            Authorization: `Bearer ${import.meta.env.VITE_OPENROUTER_API_KEY}`,
             "HTTP-Referer": window.location.origin,
             "X-Title": "Justitia.ai Consultancy Bot",
             "Content-Type": "application/json",
